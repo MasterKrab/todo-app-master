@@ -1,0 +1,247 @@
+html{
+   box-sizing: border-box;
+}
+
+*{
+   box-sizing: inherit;
+}
+
+body{
+   margin: 0;
+   font-family: Monserrat, sans-serif;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #333333;
+}
+
+.header{
+   margin-bottom: 2rem;
+}
+
+.title{
+   font-family: Raleway;
+   font-size: 2rem;
+   font-weight: 700;
+   line-height: 42px;
+}
+
+.main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 610px;
+}
+
+.to-do{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.to-do__header{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-bottom: 1.5rem;
+}
+
+
+.to-do__options{
+   display: flex;
+   justify-content: space-evenly;
+   margin: 0;
+   padding-left: 0;
+   border-bottom: 1px solid #BDBDBD;
+   list-style: none;
+   width: 90%;
+   position: relative;
+}
+
+.to-do__option{
+   font-family: Montserrat;
+   font-size: 0.9rem;
+   font-weight: 600;
+   line-height: 0.8rem;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 1rem;   
+   display: block;
+   position: relative;
+   cursor: pointer;
+}
+
+.to-do__option--active::before{
+   content:"";
+   background-color: #2F80ED;
+   width: 89px;
+   height: 4px;
+   position: absolute;
+   bottom: -1px;
+   left: 50%;
+   transform: translateX(-50%);
+   border-top-left-radius: 50%;
+   border-top-right-radius: 50%;
+}
+
+.to-do__form{
+   width: 95%;
+   display: flex;
+   justify-content: center;
+}
+
+.to-do__input{
+   border: 1px solid #BDBDBD;
+   border-radius: 12px;
+   width: 70%;
+   height: 56px;
+   margin-right: 1.2rem;
+   padding-left: 1rem;
+}
+
+.to-do__submit{
+   padding: 1rem 2.2rem;
+   background-color: #2F80ED;
+   box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+   border-radius: 1rem;
+   border: none;
+   color: #FFFFFF;
+   cursor: pointer;
+}
+
+.to-do__submit:focus{
+   outline: none;
+}
+
+.to-do__tasks{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 2rem;
+   padding-left: 0;
+}
+
+.task{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: 1.2rem;
+   margin-bottom: 1rem;
+}
+ 
+.task__check{
+   display: flex;
+}
+
+.task__input{
+   appearance: none;
+   min-width: 1.2rem;
+   height: 1.2rem;
+   outline: none;
+   border: 1px solid #828282;
+   border-radius: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.task__label{
+    cursor: pointer;
+   font-size: 1.2rem;
+   margin-left: 0.5rem;
+}
+ 
+.task__input:hover{
+   transition: background-color 0.5s;
+    background-color: #a3a3a3;
+    border: 1px solid #828282;
+}
+ 
+.task__input:checked{
+   border: none;
+   background-color: #2F80ED;
+}
+ 
+ .task__input:checked ~ .task__label{
+    text-decoration: line-through;
+}
+
+.task__input::after{
+   content: "\f00c";
+   font-weight: 600;
+   font-size: 0.75rem;
+   font-family: 'Font Awesome 5 Free';
+   color: #fff;
+   display: none;
+}
+ 
+.task__input:checked::after{
+   display: block;
+}
+
+.task__erase{
+   display: none;
+   margin-right: 1.2rem;
+   color:#BDBDBD;
+   cursor: pointer;
+}
+
+.task__erase--active{
+   display: block;
+}
+
+
+.erase-button{
+   color: #fff;
+   background-color: #EB5757;
+   padding: 0.2rem 2.1rem;
+   border-radius: 0.3rem;
+   align-self: flex-end;
+   margin-right: 0.5rem;
+   cursor: pointer;
+   display: none;
+}
+
+.erase-button--active{
+   display: block;
+}
+
+.erase-button__text{
+   display: inline-block;
+   margin-left: 0.5rem;
+   font-weight: 600;
+}
+
+.footer{
+   margin-top: auto;
+   padding: 1.5rem;
+}
+
+.footer__link{
+   color: #A9A9A9;
+   text-decoration: none;
+}
+
+
+@media (min-width: 500px){
+   .task{
+      display: flex;
+      align-items: center;
+      margin-left: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .task__erase{
+      margin-right: 3.2rem;
+   }
+
+   .erase-button{
+      margin-right: 2.5rem;
+   }
+}
