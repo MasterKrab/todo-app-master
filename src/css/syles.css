@@ -120,6 +120,10 @@ body{
    cursor: pointer;
 }
 
+.to-do__submit:hover{
+   background-color: #1c74e7;
+}
+
 .to-do__submit:focus{
    outline: none;
 }
@@ -198,6 +202,10 @@ body{
    cursor: pointer;
 }
 
+.task__erase:hover{
+   color:#928d8d;
+}
+
 .task__erase--active{
    display: block;
 }
@@ -212,6 +220,10 @@ body{
    margin-right: 0.5rem;
    cursor: pointer;
    display: none;
+}
+
+.erase-button:hover{
+   background-color: #e64f4f;
 }
 
 .erase-button--active{
