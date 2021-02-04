@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>To do list</title>
+   <title>To Do List</title>
 
    <!-- Favicons -->
    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
@@ -40,16 +40,12 @@
 </head>
 <body>   
 
-   <header class="header">
-      <h1 class="title">#todo</h1>
-   </header>
-
    <main class="main">
       <article class="to-do">
-         
+         <h1 class="title">#todo</h1>
          <header class="to-do__header">
             <ul class="to-do__options" id="to-do-options">
-               <li class="to-do__option" data-id="1">All</li>
+               <li class="to-do__option to-do__option--active" data-id="1">All</li>
                <li class="to-do__option" data-id="2">Active</li>
                <li class="to-do__option" data-id="3">Completed</li>
             </ul>
@@ -62,19 +58,9 @@
 
          <ul class="to-do__tasks" id="tasks-list">
 
-            <!-- <li class="task">
-
-               <div class="task__check">
-                  <input class="task__input" type="checkbox" id="task1323">
-                  <label  class="task__label"  for="task1323">Lorem ipsum dolor sit amet.</label>
-               </div>
-
-               <i class="fas fa-trash task__erase task__erase--active"></i>
-
-            </li> -->
-
          </ul>
-         <div class="erase-button erase-button--active">
+         
+         <div class="erase-button" id="erase-button">
             <i class="fas fa-trash erase-button__icon "></i>
             <p class="erase-button__text">delete all</p>
          </div>

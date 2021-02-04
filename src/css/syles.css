@@ -16,15 +16,16 @@ body{
    color: #333333;
 }
 
-.header{
+/* .header{
    margin-bottom: 2rem;
 }
-
+ */
 .title{
    font-family: Raleway;
    font-size: 2rem;
    font-weight: 700;
    line-height: 42px;
+   margin-bottom: 3rem;
 }
 
 .main{
@@ -102,6 +103,11 @@ body{
    height: 56px;
    margin-right: 1.2rem;
    padding-left: 1rem;
+}
+
+.to-do__input:focus{
+   outline: none;
+   border: 1px solid #000;
 }
 
 .to-do__submit{
