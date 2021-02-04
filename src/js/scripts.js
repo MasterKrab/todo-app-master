@@ -143,6 +143,7 @@ tasksContainer.addEventListener("click", e =>{
    }
    
    syncStorage()
+   syncStorage()
 })
 
 // Delete all button
