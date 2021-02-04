@@ -138,7 +138,7 @@ tasksContainer.addEventListener("click", e =>{
 
    if(e.target.classList.contains("task__erase")){
       tasks = tasks.filter(task => task.id !== e.target.dataset.id)
-      if(tasks.length < 1)  eraseButton.classList.remove("erase-button--active")
+      if(tasks.filter(task => task.id !== e.target.dataset.id).length < 1)  eraseButton.classList.remove("erase-button--active")
       filterCompleted()
    }
    
@@ -151,6 +151,7 @@ eraseButton.addEventListener("click", () =>{
    printHTML(tasks)
    eraseButton.classList.remove("erase-button--active")
 
+   
    options.forEach(option => {
       option.classList.remove("to-do__option--active")
       if(option.dataset.id == "1" && !option.classList.contains("to-do__option--active")) { 
