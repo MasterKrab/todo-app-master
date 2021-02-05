@@ -16,10 +16,6 @@ body{
    color: #333333;
 }
 
-/* .header{
-   margin-bottom: 2rem;
-}
- */
 .title{
    font-family: Raleway;
    font-size: 2rem;
@@ -105,11 +101,6 @@ body{
    padding-left: 1rem;
 }
 
-.to-do__input:focus{
-   outline: none;
-   border: 1px solid #000;
-}
-
 .to-do__submit{
    padding: 1rem 2.2rem;
    background-color: #2F80ED;
@@ -125,7 +116,7 @@ body{
 }
 
 .to-do__submit:focus{
-   outline: none;
+   outline: dashed 2px #000000;
 }
 
 .to-do__tasks{
@@ -152,7 +143,6 @@ body{
    appearance: none;
    min-width: 1.2rem;
    height: 1.2rem;
-   outline: none;
    border: 1px solid #828282;
    border-radius: 20%;
    display: flex;
